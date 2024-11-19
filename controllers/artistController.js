@@ -147,9 +147,9 @@ exports.ResendOtp = catchAsync(async (req, res) => {
     if (artist.isBlocked) {
       return res.json({ error: "sorry,you are blocked by the Admin!" });
     }
-    if (!artist.isApproved) {
-      return res.json({ error: "wait for the Approval by the Admin!" });
-    }
+    // if (!artist.isApproved) {
+    //   return res.json({ error: "wait for the Approval by the Admin!" });
+    // }
     if (!artist.isVerified) {
       await Artist.findOneAndDelete({ email: email });
       return res.json({ error: "sorry,you are not verified!, sign up again" });

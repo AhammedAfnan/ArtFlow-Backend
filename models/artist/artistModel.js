@@ -63,10 +63,10 @@ const artistSchema = new mongoose.Schema({
         type:Boolean,
         default:false,
     },
-    isApproved:{
-        type:Boolean,
-        default:false,
-    },
+    // isApproved:{
+    //     type:Boolean,
+    //     default:false,
+    // },
     // payment:{
     //     type:String,
     //     required:false,

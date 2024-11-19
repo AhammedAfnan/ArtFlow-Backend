@@ -341,7 +341,7 @@ exports.getAllArtists = catchAsync(async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const pageSize = 3; // Adjust the page size as needed
   const query = {
-    isApproved: true,
+    // isApproved: true,
     isBlocked: false,
     isVerified: true,
     // isSubscribed: true

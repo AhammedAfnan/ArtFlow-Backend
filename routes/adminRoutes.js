@@ -25,7 +25,7 @@ adminRouter
 
   //arists
   .get("/showArtists",adminAuthMiddleware,adminController.showArtists)
-  .post("/approveArtist",adminAuthMiddleware,adminController.approveArtist)
+  // .post("/approveArtist",adminAuthMiddleware,adminController.approveArtist)
   .post("/blockArtist",adminAuthMiddleware,adminController.blockArtist)
 
   //banners
