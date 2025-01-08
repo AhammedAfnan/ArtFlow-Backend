@@ -20,6 +20,7 @@ app.use(
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'dist')))
 
 // const { intializeSocket } = require("./sockets/chatSocket");
 const { intializeSocket } = require("./sockets/chatSocket")
@@ -34,6 +35,10 @@ app.use("/api/admin", adminRoutes);
 
 // //artist
 app.use("/api/artist", artistRoutes);
+
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'dist','index.html'))
+})
 
 
 const port = process.env.PORT || 8000;
