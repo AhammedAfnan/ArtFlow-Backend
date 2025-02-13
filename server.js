@@ -13,7 +13,7 @@ mongoConnect()
 
 app.use(
     cors({
-        origin:"*",
+        origin:"https://artflow1.netlify.app",
     })
 )
 
