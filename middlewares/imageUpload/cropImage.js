@@ -71,6 +71,7 @@ exports.resizeArtistProfile = async (req, res, next) => {
 
   try {
     if (!req.file) return next();
+    
     req.file.filename = `artist-${artist.email}-${Date.now()}.jpeg`;
     req.body.artistProfile = req.file.filename;
     await sharp(req.file.buffer)
